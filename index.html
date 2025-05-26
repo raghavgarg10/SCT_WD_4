@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>To-Do App</h2>
+    <div class="task-input">
+      <input type="text" id="taskTitle" placeholder="Enter Task Title" />
+      <input type="datetime-local" id="taskDateTime" />
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <div id="filterSection" class="hidden">
+      <div class="filter-buttons">
+        <button id="allBtn" class="active" onclick="filterTasks('all')">All Tasks</button>
+        <button id="pendingBtn" onclick="filterTasks('pending')">Pending</button>
+        <button id="completedBtn" onclick="filterTasks('completed')">Completed</button>
+      </div>
+    </div>
+
+    <div id="taskList" class="hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
